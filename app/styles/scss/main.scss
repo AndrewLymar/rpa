@@ -1,0 +1,353 @@
+@import "vars";
+@import "fonts";
+@import "helpers";
+
+body {
+    font-family: $default-font;
+}
+
+button {
+    padding: 5px 20px;
+    background: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.img-container {
+    height: auto;
+
+    img {
+        width: 100%;
+    }
+}
+
+.section {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background: #000;
+
+    &__title {
+        margin-bottom: 50px;
+        font-family: 'Philosopher', sans-serif;
+        font-size: 38px;
+        font-weight: 800;
+        color: $main-color;
+    }
+
+    &__text {
+        color: #fff;
+    }
+}
+
+.header {
+    background: #000;
+    background: url("../../img/battle4.jpg") no-repeat;
+    background-size: cover;
+    height: 100vh;
+
+    &__container {
+        width: 100%;
+        margin: 0 auto;
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+}
+
+.menu-grid {
+    display: grid;
+    align-items: center;
+    grid-template-areas:
+        "logo menu-left menu-right"
+    ;
+    grid-auto-columns: auto 1fr 1fr;
+
+    @media only screen and (max-width: $md) {
+        grid-template-areas:
+            "logo . ."
+            "menu-left menu-left menu-left"
+            "menu-right menu-right menu-right "
+        ;
+
+    }
+
+}
+
+.menu-grid.mobile {
+    height: 100vh;
+}
+
+.logo {
+    margin-right: 30px;
+    font-family: 'Test2', cursive;
+    font-size: 48px;
+    line-height: 1.1em;
+    color: $main-color;
+    grid-area: logo;
+    cursor: pointer;
+}
+
+.menu-icon {
+    display: none;
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    top: 18px;
+    right: 10%;
+    grid-area: menu-icon;
+
+    @media only screen and (max-width: $md) {
+        display: block;
+    }
+}
+
+
+
+.menu {
+    position: fixed;
+    width: 100%;
+    padding: 10px;
+    transition: all 0.6s ease;
+    z-index: 99999;
+
+    &__left {
+        grid-area: menu-left;
+        justify-self: start;
+
+        @media only screen and (max-width: $md) {
+            justify-self: center;
+        }
+    }
+
+    &__right {
+        grid-area: menu-right;
+        justify-self: end;
+
+        @media only screen and (max-width: $md) {
+            margin-bottom: 30px;
+            justify-self: center;
+        }
+    }
+
+    &__list {
+        margin-left: 25px;
+        transition: all 0.4s ease;
+
+        @media only screen and (max-width: $md) {
+            display: none;
+            margin-top: 30px;
+            margin-left: 0px;
+        }
+    }
+
+    &__item {
+        margin-right: 25px;
+        color: #fff;
+
+        @media only screen and (max-width: $md) {
+            margin-right: 0px;
+            margin-bottom: 20px;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &__link {
+        //font-family: 'Amarante', cursive;
+        font-family: 'Philosopher', sans-serif;
+        font-size: 14px;
+        font-weight: 800;
+        text-transform: uppercase;
+        text-decoration: none;
+        transition: all 0.4s ease;
+
+        @media only screen and (max-width: $md) {
+            font-size: 16px;
+        }
+
+        &:hover {
+            color: $main-color;
+        }
+    }
+
+    &__button {
+        background: $main-color;
+        border: 1px solid $main-color;
+        color: #fff;
+        transition: all 0.4s ease;
+
+        &:hover {
+            background: none;
+        }
+    }
+
+}
+
+.menu.sticky-menu {
+    background: #000;
+}
+
+/*
+.banner {
+    width: 100%;
+    height: 100vh;
+
+    &__title,
+    &__text {
+        color: #fff;
+        text-shadow: 0 0 20px #0099FF;
+
+
+    }
+
+    &__title {
+        font-family: 'Test2', cursive;
+        font-weight: 400;
+        font-size: 118px;
+        text-transform: uppercase;
+        line-height: 1.1em;
+    }
+
+    &__text {
+        font-size: 28px;
+    }
+
+    &__button {
+        margin-top: 65px;
+        margin-left: -25px;
+        padding: 10px 30px;
+        background: $main-color;
+        border: 0px;
+        font-family: 'Amarante', cursive;
+        font-size: 28px;
+        color: #fff;
+        transition: all 0.4s ease;
+
+        &:hover {
+            background-color: darken($main-color, 10%);
+        }
+
+        &:active {
+            outline: none;
+        }
+    }
+
+}
+*/
+.banner {
+    &__video-wrapper {
+        height: 100vh;
+
+        .video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .overlay {
+            position: absolute;
+            z-index: 1;
+
+            p {
+                font-size: 32px;
+                color: #9f3;
+            }
+        }
+    }
+
+    &__title,
+    &__text {
+        color: #fff;
+        text-shadow: 0 0 20px #0099FF;
+
+
+    }
+
+    &__title {
+        font-family: 'Test2', cursive;
+        font-weight: 400;
+        font-size: 118px;
+        text-transform: uppercase;
+        line-height: 1.1em;
+    }
+
+    &__text {
+        font-size: 28px;
+    }
+
+    &__button {
+        margin-top: 65px;
+        margin-left: -25px;
+        padding: 10px 30px;
+        background: $main-color;
+        border: 0px;
+        font-family: 'Amarante', cursive;
+        font-size: 28px;
+        color: #fff;
+        transition: all 0.4s ease;
+
+        &:hover {
+            background-color: darken($main-color, 10%);
+        }
+
+        &:active {
+            outline: none;
+        }
+    }
+}
+
+.about {
+    .about__text {
+        font-family: 'PT Sans', sans-serif;
+        font-size: 20px;
+    }
+
+    &__img-gallery {
+        margin-top: 50px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+        grid-gap: 20px;
+
+        @media only screen and (max-width: $md) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media only screen and (max-width: $sm) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        a {
+            img {
+                position: relative;
+                width: 100%;
+                height: auto;
+                border: 2px solid #fff;
+                transition: transform .15s ease;
+            }
+
+            &:hover {
+                img {
+                    transform: scale(1.05);
+                    z-index: 5;
+                }
+            }
+
+            &.big {
+                img {
+                    width: 40%;
+                }
+            }
+        }
+    }
+}
+
+.sl-wrapper {
+    .sl-image {
+        margin-top: 25px;
+    }
+}
+
+@import "media";

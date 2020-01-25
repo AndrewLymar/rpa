@@ -1,12 +1,12 @@
 @font-face {
-  font-family: "Test";
+  font-family: "Royal";
   font-weight: normal;
   font-style: normal;
   src: url("../fonts/Royal.eot");
   src: url("../fonts/Royal.eot?#iefix") format("embedded-opentype"), url("../fonts/Royal.woff") format("woff"), url("../fonts/Royal.ttf") format("truetype"); }
 
 @font-face {
-  font-family: "Test2";
+  font-family: "Royal2";
   font-weight: normal;
   font-style: normal;
   src: url("../fonts/Royal2.eot");
@@ -552,7 +552,7 @@ button {
 
 .header {
   background: #000;
-  background: url("../../img/battle4.jpg") no-repeat;
+  background: url("../../img/header-bg.jpg") no-repeat;
   background-size: cover;
   height: 100vh; }
   .header__container {
@@ -575,7 +575,7 @@ button {
 
 .logo {
   margin-right: 30px;
-  font-family: 'Test2', cursive;
+  font-family: 'Royal2', cursive;
   font-size: 48px;
   line-height: 1.1em;
   color: #0099FF;
@@ -655,10 +655,13 @@ button {
   background: #000; }
 
 .banner__video-wrapper {
-  height: 100vh; }
+  position: relative;
+  height: 100vh;
+  overflow: hidden; }
   .banner__video-wrapper .video {
+    position: relative;
     width: 100%;
-    height: 100%;
+    height: 110%;
     object-fit: cover; }
   .banner__video-wrapper .overlay {
     position: absolute;
@@ -669,11 +672,17 @@ button {
   text-shadow: 0 0 20px #0099FF; }
 
 .banner__title {
-  font-family: 'Test2', cursive;
+  font-family: 'Royal2', cursive;
   font-weight: 400;
   font-size: 118px;
   text-transform: uppercase;
   line-height: 1.1em; }
+  @media only screen and (max-width: 768px) {
+    .banner__title {
+      font-size: 72px; } }
+  @media only screen and (max-width: 480px) {
+    .banner__title {
+      font-size: 58px; } }
 
 .banner__text {
   font-size: 28px; }
@@ -681,6 +690,9 @@ button {
 .banner__button {
   margin-top: 65px;
   margin-left: -25px; }
+  @media only screen and (max-width: 768px) {
+    .banner__button {
+      margin-left: 0; } }
 
 .about {
   padding-top: 100px;
@@ -725,6 +737,11 @@ button {
     font-family: 'PT Sans', sans-serif;
     font-size: 24px;
     list-style: disc; }
+    @media only screen and (max-width: 768px) {
+      .gameplay ul {
+        margin-top: 50px;
+        font-size: 30px;
+        list-style: none; } }
     .gameplay ul li {
       margin-bottom: 10px; }
 
@@ -749,7 +766,7 @@ button {
   font-family: 'PT Sans', sans-serif;
   font-size: 20px;
   color: #fff; }
-  .versions h4 {
+  .versions .version-button {
     margin-top: 15px;
     cursor: pointer; }
 
@@ -784,3 +801,46 @@ button {
         color: #4caf50; }
   .donate__button {
     margin-top: 50px; }
+
+.contacts {
+  padding-top: 100px;
+  padding-bottom: 100px; }
+
+.social {
+  margin-right: 60px;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 28px;
+  color: #fff;
+  cursor: pointer; }
+  @media only screen and (max-width: 480px) {
+    .social {
+      margin-top: 20px;
+      margin-right: 0; } }
+  .social:last-child {
+    margin-right: 0; }
+  .social:hover a {
+    color: #0099FF; }
+  .social:hover svg {
+    fill: #0099FF; }
+  .social svg {
+    transition: all 0.4s ease;
+    margin-right: 10px; }
+  .social a {
+    transition: all 0.4s ease;
+    text-decoration: none; }
+
+.soc-bottom {
+  margin-top: 20px; }
+  .soc-bottom .social {
+    margin-right: 0;
+    font-size: 26px; }
+
+footer {
+  padding-top: 100px;
+  padding-bottom: 50px;
+  background-color: #000; }
+
+.copy {
+  font-family: 'PT Sans', sans-serif;
+  font-size: 18px;
+  color: #fff; }

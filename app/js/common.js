@@ -10,7 +10,7 @@
      var gallery = $('.about__img-gallery a').simpleLightbox();
 
      $(".version").hide();
-     $("h4").click(function () {
+     $(".version-button").click(function () {
          $(this).next().slideToggle();
      });
  });

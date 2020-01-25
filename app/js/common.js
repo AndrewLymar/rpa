@@ -8,4 +8,9 @@
      });
 
      var gallery = $('.about__img-gallery a').simpleLightbox();
+
+     $(".version").hide();
+     $("h4").click(function () {
+         $(this).next().slideToggle();
+     });
  });

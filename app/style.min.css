@@ -1462,6 +1462,27 @@ button {
   cursor: pointer;
 }
 
+.main-button {
+  min-width: 200px;
+  padding: 10px 30px;
+  background: #09f;
+  border: 0;
+  font-family: Amarante,cursive;
+  font-size: 28px;
+  color: #fff;
+  -webkit-transition: .4s;
+  -o-transition: .4s;
+  transition: .4s;
+}
+
+.main-button:hover {
+  background-color: #007acc;
+}
+
+.main-button:active {
+  outline: 0;
+}
+
 .img-container {
   height: auto;
 }
@@ -1471,8 +1492,6 @@ button {
 }
 
 .section {
-  padding-top: 100px;
-  padding-bottom: 100px;
   background: #000;
 }
 
@@ -1655,11 +1674,6 @@ button {
   z-index: 1;
 }
 
-.banner__video-wrapper .overlay p {
-  font-size: 32px;
-  color: #9f3;
-}
-
 .banner__text,
 .banner__title {
   color: #fff;
@@ -1681,28 +1695,21 @@ button {
 .banner__button {
   margin-top: 65px;
   margin-left: -25px;
-  padding: 10px 30px;
-  background: #09f;
-  border: 0;
-  font-family: Amarante,cursive;
-  font-size: 28px;
-  color: #fff;
-  -webkit-transition: .4s;
-  -o-transition: .4s;
-  transition: .4s;
 }
 
-.banner__button:hover {
-  background-color: #007acc;
-}
-
-.banner__button:active {
-  outline: 0;
+.about {
+  padding-top: 100px;
+  padding-bottom: 50px;
 }
 
 .about .about__text {
+  margin-bottom: 100px;
   font-family: 'PT Sans',sans-serif;
-  font-size: 20px;
+  font-size: 24px;
+}
+
+.about .about__text span {
+  color: #09f;
 }
 
 .about__img-gallery {
@@ -1749,4 +1756,102 @@ button {
 
 .sl-wrapper .sl-image {
   margin-top: 25px;
+}
+
+.gameplay {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.gameplay ul {
+  font-family: 'PT Sans',sans-serif;
+  font-size: 24px;
+  list-style: disc;
+}
+
+.gameplay ul li {
+  margin-bottom: 10px;
+}
+
+.news {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.news__container {
+  max-width: 600px;
+}
+
+.current-news {
+  font-family: 'PT Sans',sans-serif;
+  font-size: 22px;
+  color: #fff;
+}
+
+.history {
+  margin-top: 50px;
+  font-family: Philosopher,sans-serif;
+  font-size: 26px;
+  color: #09f;
+}
+
+.versions {
+  font-family: 'PT Sans',sans-serif;
+  font-size: 20px;
+  color: #fff;
+}
+
+.versions h4 {
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+.version li {
+  margin-top: 10px;
+  list-style: disc;
+}
+
+.version .bug-type {
+  margin-left: -22px;
+  list-style: none;
+  text-transform: uppercase;
+}
+
+.donate {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.donate__text {
+  font-family: Philosopher,sans-serif;
+  font-size: 26px;
+  color: #fff;
+}
+
+.donate a {
+  text-decoration: none;
+}
+
+.donate__logo {
+  margin-left: 5px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.donate__logo .donate-logo__img {
+  margin-right: 5px;
+}
+
+.donate__logo .donate-logo__text,
+.donate__logo .donate-logo__text span:first-child {
+  color: #fff;
+}
+
+.donate__logo .donate-logo__text span:last-child {
+  color: #4caf50;
+}
+
+.donate__button {
+  margin-top: 50px;
 }

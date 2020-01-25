@@ -55,7 +55,6 @@
         }
 
         function onClickChangeState(event) {
-            //$menuGrid.toggleClass("mobile");
             if (!menuIsOpened) {
                 showMenu();
             } else {
@@ -95,7 +94,7 @@
         function scrollTo(event) {
             var target = this.hash;
             var $target = $(target);
-            event.preventDefault();
+            //event.preventDefault();
             if ($(document).width() <= options.mobileResolution) {
                 hideMenu();
             }

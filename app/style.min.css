@@ -1578,6 +1578,11 @@ button {
     display: block;
   }
 
+  .menu {
+    padding: 0;
+    background: #000;
+  }
+
   .menu__left {
     justify-self: center;
   }
@@ -1615,6 +1620,19 @@ button {
   transition: .4s;
 }
 
+.menu__link:hover {
+  color: #09f;
+}
+
+.menu__button {
+  background: #09f;
+  border: 1px solid #09f;
+  color: #fff;
+  -webkit-transition: .4s;
+  -o-transition: .4s;
+  transition: .4s;
+}
+
 @media only screen and (max-width:768px) {
   .menu__right {
     margin-bottom: 30px;
@@ -1633,21 +1651,13 @@ button {
   }
 
   .menu__link {
-    font-size: 16px;
+    font-size: 22px;
   }
-}
 
-.menu__link:hover {
-  color: #09f;
-}
-
-.menu__button {
-  background: #09f;
-  border: 1px solid #09f;
-  color: #fff;
-  -webkit-transition: .4s;
-  -o-transition: .4s;
-  transition: .4s;
+  .menu__button {
+    min-width: 180px;
+    font-size: 22px;
+  }
 }
 
 .menu__button:hover {

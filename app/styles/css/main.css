@@ -601,6 +601,10 @@ button {
   padding: 10px;
   transition: all 0.6s ease;
   z-index: 99999; }
+  @media only screen and (max-width: 768px) {
+    .menu {
+      padding: 0;
+      background: #000; } }
   .menu__left {
     grid-area: menu-left;
     justify-self: start; }
@@ -640,7 +644,7 @@ button {
     transition: all 0.4s ease; }
     @media only screen and (max-width: 768px) {
       .menu__link {
-        font-size: 16px; } }
+        font-size: 22px; } }
     .menu__link:hover {
       color: #0099FF; }
   .menu__button {
@@ -648,6 +652,10 @@ button {
     border: 1px solid #0099FF;
     color: #fff;
     transition: all 0.4s ease; }
+    @media only screen and (max-width: 768px) {
+      .menu__button {
+        min-width: 180px;
+        font-size: 22px; } }
     .menu__button:hover {
       background: none; }
 

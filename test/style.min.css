@@ -1665,6 +1665,28 @@ button {
   transition: .4s;
 }
 
+.menu__button:hover {
+  background: 0 0;
+}
+
+.menu.sticky-menu {
+  background: #000;
+}
+
+.banner__video-wrapper {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.banner__video-wrapper .video {
+  position: relative;
+  width: 100%;
+  height: 110%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
 @media only screen and (max-width:768px) {
   .menu__right {
     margin-bottom: 30px;
@@ -1690,28 +1712,11 @@ button {
     min-width: 180px;
     font-size: 22px;
   }
-}
 
-.menu__button:hover {
-  background: 0 0;
-}
-
-.menu.sticky-menu {
-  background: #000;
-}
-
-.banner__video-wrapper {
-  position: relative;
-  height: 100vh;
-  overflow: hidden;
-}
-
-.banner__video-wrapper .video {
-  position: relative;
-  width: 100%;
-  height: 110%;
-  -o-object-fit: cover;
-  object-fit: cover;
+  .banner__video-wrapper .video {
+    width: 128%;
+    left: 46px;
+  }
 }
 
 .banner__video-wrapper .overlay {

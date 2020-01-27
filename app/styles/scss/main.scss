@@ -260,6 +260,11 @@ button {
             width: 100%;
             height: 110%;
             object-fit: cover;
+
+            @media only screen and (max-width: $md) {
+                width: 128%;
+                left: 46px;
+            }
         }
 
         .overlay {

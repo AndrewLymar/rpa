@@ -10,7 +10,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    min-width: 1000px;
+    //min-width: 1000px;
     background: #000 url(http://hello-site.ru//main/images/preloads/puff.svg) center center no-repeat;
     background-size: 73px;
 }
@@ -24,6 +24,14 @@ button {
     background: none;
     border-radius: 3px;
     cursor: pointer;
+}
+
+.mobile-donate {
+    display: none;
+
+    @media only screen and (max-width: $md) {
+        display: block;
+    }
 }
 
 .main-button {
@@ -81,6 +89,11 @@ button {
         margin: 0 auto;
         padding-left: 25px;
         padding-right: 25px;
+
+        @media only screen and (max-width: $md) {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
     }
 }
 
@@ -94,11 +107,15 @@ button {
 
     @media only screen and (max-width: $md) {
         grid-template-areas:
-            "logo . ."
+            "menu-button . ."
             "menu-left menu-left menu-left"
-            "menu-right menu-right menu-right "
+            "menu-right menu-right menu-right"
         ;
 
+    }
+
+    a {
+        text-decoration: none;
     }
 
 }
@@ -129,6 +146,7 @@ button {
 
     @media only screen and (max-width: $md) {
         display: block;
+        margin-top: 8px;
     }
 }
 
@@ -209,6 +227,7 @@ button {
     }
 
     &__button {
+        grid-area: menu-button;
         background: $main-color;
         border: 1px solid $main-color;
         color: #fff;

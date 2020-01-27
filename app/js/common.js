@@ -16,10 +16,8 @@ function fadeOutnojquery(el) {
 
 window.onload = function () {
     setTimeout(function () {
-            fadeOutnojquery(hellopreloader);
-        }
-
-        , 1000);
+        fadeOutnojquery(hellopreloader);
+    }, 1000);
 };
 
 $(function () {

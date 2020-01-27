@@ -519,7 +519,6 @@
   left: 0;
   width: 100%;
   height: 100%;
-  min-width: 1000px;
   background: #000 url(http://hello-site.ru//main/images/preloads/puff.svg) center center no-repeat;
   background-size: 73px; }
 
@@ -531,6 +530,12 @@ button {
   background: none;
   border-radius: 3px;
   cursor: pointer; }
+
+.mobile-donate {
+  display: none; }
+  @media only screen and (max-width: 768px) {
+    .mobile-donate {
+      display: block; } }
 
 .main-button {
   min-width: 200px;
@@ -572,6 +577,10 @@ button {
     margin: 0 auto;
     padding-left: 25px;
     padding-right: 25px; }
+    @media only screen and (max-width: 768px) {
+      .header__container {
+        padding-top: 20px;
+        padding-bottom: 20px; } }
 
 .menu-grid {
   display: grid;
@@ -580,7 +589,9 @@ button {
   grid-auto-columns: auto 1fr 1fr; }
   @media only screen and (max-width: 768px) {
     .menu-grid {
-      grid-template-areas: "logo . ." "menu-left menu-left menu-left" "menu-right menu-right menu-right "; } }
+      grid-template-areas: "menu-button . ." "menu-left menu-left menu-left" "menu-right menu-right menu-right"; } }
+  .menu-grid a {
+    text-decoration: none; }
 
 .menu-grid.mobile {
   height: 100vh; }
@@ -605,7 +616,8 @@ button {
   grid-area: menu-icon; }
   @media only screen and (max-width: 768px) {
     .menu-icon {
-      display: block; } }
+      display: block;
+      margin-top: 8px; } }
 
 .menu {
   position: fixed;
@@ -660,6 +672,7 @@ button {
     .menu__link:hover {
       color: #0099FF; }
   .menu__button {
+    grid-area: menu-button;
     background: #0099FF;
     border: 1px solid #0099FF;
     color: #fff;

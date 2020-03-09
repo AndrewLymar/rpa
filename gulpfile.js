@@ -54,8 +54,6 @@ gulp.task('js', function () {
 
 gulp.task('imagemin', function () {
     return gulp.src(['app/img/**/*', '!app/img/**/*.svg'])
-        .pipe(cache(imagemin()))
-        .pipe(imagemin())
         .pipe(gulp.dest('dist/img'));
 });
 
@@ -153,6 +151,6 @@ gulp.task('watch', function (done) {
     done();
 });
 
-gulp.task('build', gulp.series('removedist', 'sass', 'css', 'js', 'svg', 'move'));
+gulp.task('build', gulp.series('removedist', 'sass', 'css', 'js', 'imagemin', 'svg', 'move'));
 
 gulp.task('default', gulp.series('sass', 'css', 'js', 'watch'));

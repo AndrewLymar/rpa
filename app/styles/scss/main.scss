@@ -460,6 +460,13 @@ button {
         margin-left: 5px;
         display: inline-flex;
 
+        .skrill {
+            width: 35px;
+            margin-left: 5px;
+            margin-right: 5px;
+            height: auto;
+        }
+
         .donate-logo__img {
             margin-right: 5px;
         }

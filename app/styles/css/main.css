@@ -833,6 +833,11 @@ button {
   .donate__logo {
     margin-left: 5px;
     display: inline-flex; }
+    .donate__logo .skrill {
+      width: 35px;
+      margin-left: 5px;
+      margin-right: 5px;
+      height: auto; }
     .donate__logo .donate-logo__img {
       margin-right: 5px; }
     .donate__logo .donate-logo__text {

@@ -445,27 +445,17 @@ button {
 .donate {
     padding-top: 100px;
     padding-bottom: 100px;
-
-    &__text {
-        font-family: 'Philosopher', sans-serif;
-        font-size: 26px;
-        color: #fff;
-    }
-
+    font-family: 'Philosopher', sans-serif;
+    font-size: 26px;
+    color: #fff;
     a {
         text-decoration: none;
     }
-
-    &__logo {
-        margin-left: 5px;
-        display: inline-flex;
-
-        .skrill {
-            width: 35px;
-            margin-left: 5px;
-            margin-right: 5px;
-            height: auto;
-        }
+    .payment-service-cont {
+        margin-top: 50px;
+    }
+    .payment-service {
+        margin-bottom: 50px;   
 
         .donate-logo__img {
             margin-right: 5px;
@@ -484,11 +474,17 @@ button {
                 }
             }
         }
-
+        .skrill-img {
+            width: 110px;
+            height: auto;
+        }
+        .skrill-text {
+            margin-top: 15px;
+        }
     }
 
     &__button {
-        margin-top: 50px;
+        margin-top: 25px;
     }
 }
 

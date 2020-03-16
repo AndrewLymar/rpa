@@ -1897,9 +1897,6 @@ button {
 .donate {
   padding-top: 100px;
   padding-bottom: 100px;
-}
-
-.donate__text {
   font-family: Philosopher,sans-serif;
   font-size: 26px;
   color: #fff;
@@ -1909,35 +1906,38 @@ button {
   text-decoration: none;
 }
 
-.donate__logo {
-  margin-left: 5px;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+.donate .payment-service-cont {
+  margin-top: 50px;
 }
 
-.donate__logo .skrill {
-  width: 35px;
-  margin-left: 5px;
-  margin-right: 5px;
-  height: auto;
+.donate .payment-service {
+  margin-bottom: 50px;
 }
 
-.donate__logo .donate-logo__img {
+.donate .payment-service .donate-logo__img {
   margin-right: 5px;
 }
 
-.donate__logo .donate-logo__text,
-.donate__logo .donate-logo__text span:first-child {
+.donate .payment-service .donate-logo__text,
+.donate .payment-service .donate-logo__text span:first-child {
   color: #fff;
 }
 
-.donate__logo .donate-logo__text span:last-child {
+.donate .payment-service .donate-logo__text span:last-child {
   color: #4caf50;
 }
 
+.donate .payment-service .skrill-img {
+  width: 110px;
+  height: auto;
+}
+
+.donate .payment-service .skrill-text {
+  margin-top: 15px;
+}
+
 .donate__button {
-  margin-top: 50px;
+  margin-top: 25px;
 }
 
 .contacts {
